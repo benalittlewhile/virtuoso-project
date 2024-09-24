@@ -5,13 +5,13 @@
 
 This application provides a portal to search [Met Museum](https://www.metmuseum.org/) exhibits and view details on the returned items. It loads a default search for "Eyck", but you can type whatever you want in the search bar and hit enter to look for something more interesting. Item details and images are only loaded when they enter the viewport, so while there may be many results there shouldn't be too much of a performance hit on each search.
 
-<img width="1425" alt="image" src="https://github.com/user-attachments/assets/a5e0e09f-7353-4105-93d8-e8954447fbdd">
-
-Scales down to fit mobile and handles empty results
-<img width="869" alt="image" src="https://github.com/user-attachments/assets/639b7b71-ee58-41db-896a-16c2e2d01c57">
-
+<img width="1410" alt="image" src="https://github.com/user-attachments/assets/ab6d3983-671e-4ccd-a847-81816926ca7b">
+<br><br>
+Scales down to fit mobile and handles empty results 
+<br><br>
+<img width="872" alt="image" src="https://github.com/user-attachments/assets/a6e17738-823c-4739-91dc-9edbee6be86c">
+<br><br>
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/81e65308-283f-456d-9b17-b878e2525fa3">
-
 
 ## Setup
 
