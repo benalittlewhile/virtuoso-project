@@ -112,6 +112,13 @@ rounded-lg bg-gray-200 drop-shadow-lg hover:drop-shadow-xl"
                 {:else}
                   Department Not Available
                 {/if}
+                <p class="mt-2">
+                  {#if details.objectDate}
+                    {details.objectDate}
+                  {:else}
+                    Date Not Available
+                  {/if}
+                </p>
               </div>
               <div></div>
             </div>
