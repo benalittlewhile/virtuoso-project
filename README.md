@@ -1,42 +1,38 @@
-# Svelte + TS + Vite This template should help get you started developing with
-Svelte and TypeScript in Vite. ## Recommended IDE Setup [VS
-Code](https://code.visualstudio.com/) +
-[Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
-## Need an official Svelte framework? Check out
-[SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by
-Vite. Deploy anywhere with its serverless-first approach and adapt to various
-platforms, with out of the box support for TypeScript, SCSS, and Less, and
-easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more. ##
-Technical considerations **Why use this over SvelteKit?** - It brings its own
-routing solution which might not be preferable for some users. - It is first and
-foremost a framework that just happens to use Vite under the hood, not a Vite
-app. This template contains as little as possible to get started with Vite +
-TypeScript + Svelte, while taking into account the developer experience with
-regards to HMR and intellisense. It demonstrates capabilities on par with the
-other `create-vite` templates and is a good starting point for beginners dipping
-their toes into a Vite + Svelte project. Should you later need the extended
-capabilities and extensibility provided by SvelteKit, the template has been
-structured similarly to SvelteKit so that it is easy to migrate. **Why
-`global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or
-`tsconfig.json`?** Setting `compilerOptions.types` shuts out all other types not
-explicitly listed in the configuration. Using triple-slash references keeps the
-default TypeScript setting of accepting type information from the entire
-workspace, while also adding `svelte` and `vite/client` type information. **Why
-include `.vscode/extensions.json`?** Other templates indirectly recommend
-extensions via the README, but this file allows VS Code to prompt the user to
-install the recommended extension upon opening the project. **Why enable
-`allowJs` in the TS template?** While `allowJs: false` would indeed prevent the
-use of `.js` files in the project, it does not prevent the use of JavaScript
-syntax in `.svelte` files. In addition, it would force `checkJs: false`,
-bringing the worst of both worlds: not being able to guarantee the entire
-codebase is TypeScript, and also having worse typechecking for the existing
-JavaScript. In addition, there are valid use cases in which a mixed codebase may
-be relevant. **Why is HMR not preserving my local component state?** HMR state
-preservation comes with a number of gotchas! It has been disabled by default in
-both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising
-behavior. You can read the details
-[here](https://github.com/rixo/svelte-hmr#svelte-hmr). If you have state that's
-important to retain within a component, consider creating an external store
-which would not be replaced by HMR. ```ts // store.ts // An extremely simple
-external store import {writable} from "svelte/store"; export default writable(0);
+# Virtuoso Application Coding Test
+(AKA: MetSearch Extreme 3000)
+
+## Intro
+
+This application provides a portal to search [Met Museum](https://www.metmuseum.org/) exhibits and view details on the returned items. It loads a default search for "Eyck", but you can type whatever you want in the search bar and hit enter to look for something more interesting. Item details and images are only loaded when they enter the viewport, so while there may be many results there shouldn't be too much of a performance hit on each search.
+
+<img width="1425" alt="image" src="https://github.com/user-attachments/assets/a5e0e09f-7353-4105-93d8-e8954447fbdd">
+
+Scales down to fit mobile and handles empty results
+<img width="869" alt="image" src="https://github.com/user-attachments/assets/639b7b71-ee58-41db-896a-16c2e2d01c57">
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/81e65308-283f-456d-9b17-b878e2525fa3">
+
+
+## Setup
+
+To install locally, you should only need an npm package manager of your choice. You can run the following script, substituting `yarn` and `yarn run` for the equivalents of your package manager (for example, `npm install` and `npm run`):
+
+```bash
+git clone https://github.com/benalittlewhile/virtuoso-project.git
+cd virtuoso-project
+yarn  # or npm install or equivalent
+yarn run dev # or npm run dev or equivalent
 ```
+Provided there are no errors installing the required packages or building the project, it should now be available at https://localhost:5173
+
+## Thanks to
+
+While this project doesn't use too many dependencies, it does make use of the following projects:
+
+- [Svelte](https://svelte.dev/) - the framework this project is built in
+- [Tailwind](https://tailwindcss.com/) - I used tailwind for styling throughout the project
+- [Svelte-inview](https://github.com/maciekgrzybek/svelte-inview/) by Mackie Grzybek - This small library provides easy intersection observer handling, which I use to lazy load the images and object details presented in the project.
+
+## Usage note
+
+This project is essentiall a wrapper in front of the [Met Museum api](https://metmuseum.github.io/). Use of this api is subject to [these terms and conditions](https://www.metmuseum.org/information/terms-and-conditions) per the project's main page. They have also asked users to limit requests to 80 per second, so please do not make an effort to scroll entire lists of entries using this project. For more information on the api please see https://github.com/metmuseum/openaccess.
