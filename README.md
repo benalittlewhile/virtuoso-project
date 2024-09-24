@@ -35,4 +35,4 @@ While this project doesn't use too many dependencies, it does make use of the fo
 
 ## Usage note
 
-This project is essentiall a wrapper in front of the [Met Museum api](https://metmuseum.github.io/). Use of this api is subject to [these terms and conditions](https://www.metmuseum.org/information/terms-and-conditions) per the project's main page. They have also asked users to limit requests to 80 per second, so please do not make an effort to scroll entire lists of entries using this project. For more information on the api please see https://github.com/metmuseum/openaccess.
+This project is essentially a wrapper in front of the [Met Museum api](https://metmuseum.github.io/). Use of this api is subject to [these terms and conditions](https://www.metmuseum.org/information/terms-and-conditions) per the project's main page. They have also asked users to limit requests to 80 per second, so please do not make an effort to scroll entire lists of entries using this project. For more information on the api please see https://github.com/metmuseum/openaccess.
