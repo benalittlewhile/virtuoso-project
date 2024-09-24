@@ -24,8 +24,7 @@
 flex-col items-center justify-center gap-4 px-4 pt-4"
 >
   <div
-    class="mt-0 flex h-14 w-4/5 max-w-full items-center justify-between
-  rounded-full bg-[#001755] px-3 py-4 drop-shadow-lg"
+    class="mt-0 flex h-14 w-4/5 max-w-full items-center justify-between rounded-full bg-[#001755] px-3 py-4 drop-shadow-lg"
   >
     <form
       class="max-w-1/2 mt-0 flex min-h-9 w-3/4"
@@ -35,7 +34,7 @@ flex-col items-center justify-center gap-4 px-4 pt-4"
     >
       <input
         class="w-full items-center justify-between rounded-full bg-gray-200 px-4
-               drop-shadow-lg focus:outline-none"
+        drop-shadow-lg focus:outline-none"
         bind:value={inputValue}
         on:keyup|preventDefault={(e) => {
           if (e.key === "Enter") {
@@ -45,8 +44,7 @@ flex-col items-center justify-center gap-4 px-4 pt-4"
       />
     </form>
     <div
-      class="mt-0 flex min-h-9 w-32
-    items-center justify-between rounded-full px-4 text-white"
+      class="mt-0 flex min-h-9 w-32 items-center justify-between rounded-full px-4 text-white"
     >
       Results: {searchResult.total}
     </div>
@@ -62,8 +60,7 @@ flex-col items-center justify-center gap-4 px-4 pt-4"
     </div>
   {:else}
     <div
-      class="flex h-48 w-96 items-center justify-center overflow-hidden
-rounded-lg bg-gray-200 drop-shadow-lg"
+      class="flex h-48 w-96 items-center justify-center overflow-hidden rounded-lg bg-gray-200 drop-shadow-lg"
     >
       <div
         class="flex h-full w-full items-center justify-center text-lg text-[#001141]"

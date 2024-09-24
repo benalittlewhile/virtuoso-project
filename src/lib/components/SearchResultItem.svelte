@@ -1,7 +1,6 @@
 <script lang="ts">
   import { inview } from "svelte-inview";
   import type { Options } from "svelte-inview";
-  import type { ObjectsResponse } from "../api.types";
   import { fetchObjectDetails } from "../network";
   import Lightbox from "./Lightbox.svelte";
 
@@ -32,8 +31,7 @@
 </script>
 
 <div
-  class="flex h-[26rem] w-full items-center justify-center overflow-hidden
-rounded-lg bg-gray-200 drop-shadow-lg hover:drop-shadow-xl"
+  class="flex h-[26rem] w-full items-center justify-center overflow-hidden rounded-lg bg-gray-200 drop-shadow-lg hover:drop-shadow-xl"
   use:inview={inViewOptions}
   on:inview_change={handleInviewChange}
 >
@@ -43,8 +41,7 @@ rounded-lg bg-gray-200 drop-shadow-lg hover:drop-shadow-xl"
     {:then details}
       <!-- Card content -->
       <div
-        class="flex h-full max-h-full min-h-full min-w-full flex-col
-      justify-center"
+        class="flex h-full max-h-full min-h-full min-w-full flex-col justify-center"
       >
         {#if details?.primaryImageSmall}
           <button
@@ -74,18 +71,17 @@ rounded-lg bg-gray-200 drop-shadow-lg hover:drop-shadow-xl"
         <a
           href={details.objectURL}
           target="_blank"
-          class="h-1/2
-        w-full focus:outline-none"
+          class="h-1/2 w-full focus:outline-none"
           title={`Open details for ${details.title} at metmuseum.org in new tab`}
         >
           <div
             class="flex h-full w-full flex-col justify-between rounded-b-lg py-2
-        leading-4 shadow-lg"
+            leading-4 shadow-lg"
           >
             <p class="text-lg font-semibold text-[#001141]">{details.title}</p>
             <div
               class="mx-4 grid grid-cols-2 gap-x-2 rounded-lg border-2 border-[#001141]
-          py-2"
+              py-2"
             >
               <div>
                 {details.artistDisplayName
@@ -146,16 +142,15 @@ rounded-lg bg-gray-200 drop-shadow-lg hover:drop-shadow-xl"
           loading="lazy"
           src={details?.primaryImage}
           alt={"Full size image of " + details.title}
-          class="max-w-3/4 aspect-auto h-auto bg-opacity-0 focus:outline-none"
+          class="max-w-3/4 aspect-auto h-auto max-h-dvh bg-opacity-0 focus:outline-none"
         />
         <button
           id="close"
           aria-label="close"
           formnovalidate
           on:click={() => lightbox.close()}
-          class="absolute
-        right-2 top-2 h-8 w-8 rounded-full bg-white text-xl text-black"
-          >X</button
+          class="absolute right-2 top-2 h-8 w-8 rounded-full bg-white text-xl
+          text-black">X</button
         >
       </Lightbox>
     {:catch err}
